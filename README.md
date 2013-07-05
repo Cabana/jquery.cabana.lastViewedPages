@@ -48,7 +48,7 @@ Example
 ```javascript
 $('.last-viewed-pages').lastViewedPages({
 
-  count: 15
+  count: 15,
 
   title: function() {
     return $('[data-page-title]').data('page-title');
