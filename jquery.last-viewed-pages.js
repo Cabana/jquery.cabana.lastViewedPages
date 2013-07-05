@@ -23,7 +23,19 @@ var lastViewedPages = new DataSet('lastViewedPages');
   }
 
   Plugin.prototype = {
-
+   /*
+    * @desc init stuff
+    *
+    *       if there are no pages saved:
+    *       save the current page
+    *       build markup
+    *
+    *       if there are pages saved:
+    *       check if the current page is already saved, if not then save it
+    *       the current is saved, remove it and save it again (move it to the top of the list)
+    *       make sure that the list only contains {numberOfLastViewedPages} pages
+    *       build markup
+    */
     init: function() {
       var that = this;
       var element = that.element;
