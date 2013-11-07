@@ -14,16 +14,14 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'vendor/*.js',
-      'spec/*Spec.js',
-      'lib/*.js'
+      'spec/lastViewedPagesSpec.js',
+      'lib/helperFunctions.js',
+      'lib/lastViewedPages.js'
     ],
 
 
     // list of files to exclude
-    exclude: [
-      
-    ],
+    exclude: [],
 
 
     // test results reporter to use
