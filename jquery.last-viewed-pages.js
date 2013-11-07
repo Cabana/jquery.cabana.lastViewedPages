@@ -1,6 +1,5 @@
-var lastViewedPages = new DataSet('lastViewedPages');
-
 ;(function ( $, window, document, undefined ) {
+  var lastViewedPages = new DataSet('lastViewedPages');
 
   var pluginName = "lastViewedPages",
     defaults = {
