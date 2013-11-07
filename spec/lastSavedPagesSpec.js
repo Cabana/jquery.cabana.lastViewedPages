@@ -11,13 +11,13 @@ describe('lastViewedPages', function() {
     expect(pages.all()).toEqual([]);
   });
 
-  xit('saves an empty array to localStorage when constructored', function() {
+  it('saves an empty array to localStorage when constructored', function() {
     pages = new LastViewedPages();
 
-    expect(getObject('lastViewedPages')).toEqual([]);
+    expect(localStorageGetObject('lastViewedPages')).toEqual([]);
   });
 
-  xdescribe('#addPage', function() {
+  describe('#addPage', function() {
     describe('when there are no pages saved', function() {
       it('saves the page at the start of the list', function() {
         pages.addPage({ title: "Cabana.dk", url: "http://cabana.dk" });
@@ -58,7 +58,7 @@ describe('lastViewedPages', function() {
       pages.addPage({ title: "Google.dk", url: "http://google.dk" });
       pages.addPage({ title: "Cabana.dk", url: "http://cabana.dk" });
 
-      expect(getObject('lastViewedPages')).toEqual([
+      expect(localStorageGetObject('lastViewedPages')).toEqual([
         { title: "Cabana.dk", url: "http://cabana.dk" },
         { title: "Google.dk", url: "http://google.dk" }
       ]);
