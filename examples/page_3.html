@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Page 3</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+    <script src="../lib/helperFunctions.js"></script>
+    <script src="../lib/lastViewedPages.js"></script>
+    <script src="../lib/cabana.lastViewedPages.js"></script>
+
+    <script>
+      $(function() {
+
+        $('.last-viewed-pages').lastViewedPages();
+
+      });
+    </script>
+  </head>
+  <body>
+
+    <nav>
+      <a href="another_page.html">Another page</a>
+    </nav>
+
+    <div class="last-viewed-pages">
+      <h2>Last viewed pages</h2>
+      <ul>
+      </ul>
+    </div>
+
+  </body>
+</html>
