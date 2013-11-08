@@ -2,32 +2,29 @@
 
 Keep track of a users last viewed pages and make a nice list. Uses web storage (local storage).
 
-## How to use
+## Dependencies
 
-1. Include jQuery.
-2. Include [web storage class](https://github.com/davidpdrsn/Web-storage-class/).
-3. Make the required markup.
-4. Call the plugin.
+* jQuery library
+* jQuery UI Core library
+* Zurb Foundation CSS library
 
-## Example markup
+## Usuage
+
+Make some HTML
 
 ```html
-<div class="last-viewed-pages">
-  <h1>Last viewed pages</h1>
-  <ul>
-  </ul>
-</div>
+<div class="last-viewed-pages"></div>
 ```
 
-The plugin expects some container element with an empty `ul` inside it. Thats all.
-
-## Calling the plugin
+And instantiate the plugin
 
 ```javascript
-$('.last-viewed-pages').lastViewedPages();
-```
+$(function() {
 
-Thats all it takes to get it setup.
+  $('.last-viewed-pages').lastViewedPages();
+
+});
+```
 
 ## Options
 
@@ -36,25 +33,13 @@ $('.last-viewed-pages').lastViewedPages({
 
   count: [integer], // the number of last viewed pages to keep track of. Default is 10.
 
-  title: [function], // a function that returns the title of the page as a string. Default is the text of the title element.
+  currentPage: [object], // the object representing the current page. This object will be saved to localStorage. Default is `{ url: window.location.href, title: $('title').text() }`
 
-  linkClasses: [array] // an array of classes to be applied on the `a` elements inside the list. Default is an empty array.
-
-});
-```
-
-Example
-
-```javascript
-$('.last-viewed-pages').lastViewedPages({
-
-  count: 15,
-
-  title: function() {
-    return $('[data-page-title]').data('page-title');
-  },
-
-  linkClasses: ['arrow-before']
+  markup: [function] // a function that given an array of saved pages will return the markup that should be injected into the DOM. Default is a level 1 heading and an unordered list of links.
 
 });
 ```
+
+## Methods
+
+- `destroy`: Clear the array of last viewed pages in local storage and remove the injected markup.
