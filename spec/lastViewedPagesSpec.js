@@ -21,7 +21,7 @@ describe('lastViewedPages', function() {
     ]);
   });
 
-  it('saves an empty array to localStorage when constructored', function() {
+  it('saves an empty array to localStorage when constructed', function() {
     pages = new LastViewedPages();
 
     expect(localStorageGetObject('lastViewedPages')).toEqual([]);
