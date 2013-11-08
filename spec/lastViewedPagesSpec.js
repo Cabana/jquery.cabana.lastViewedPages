@@ -91,4 +91,18 @@ describe('lastViewedPages', function() {
       ]);
     });
   });
+
+  describe('#pagesSaved', function() {
+    it('returns false if there are no pages saved', function() {
+      var pages = new LastViewedPages();
+
+      expect(pages.pagesSaved()).toBe(false);
+    });
+
+    it('returns true if there are pages saved', function() {
+      var pages = new LastViewedPages({ pages: [{ url: "url", title: "title" }] });
+
+      expect(pages.pagesSaved()).toBe(true);
+    });
+  });
 });
