@@ -45,6 +45,12 @@ $('.last-viewed-pages').lastViewedPages({
 - `destroy`: Clear the array of last viewed pages in local storage and remove the injected markup.
 - `clear`: Clear the array of last viewed pages in local storage.
 
+## Data params
+
+Some of the options can also be set via `data-` attributes on the element. They will override any options set with initializing the plugin.
+
+- `data-last-viewed-pages-count`
+
 ## Compiling
 
 The business logic has been extracted into a separate class in a separate file. So you will have to concatenate a few files.
