@@ -1,5 +1,5 @@
 $(function() {
 
-  $('.last-viewed-pages').lastViewedPages();
+  var $elem = $('.last-viewed-pages').lastViewedPages();
 
 });

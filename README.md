@@ -43,6 +43,7 @@ $('.last-viewed-pages').lastViewedPages({
 ## Methods
 
 - `destroy`: Clear the array of last viewed pages in local storage and remove the injected markup.
+- `clear`: Clear the array of last viewed pages in local storage.
 
 ## Compiling
 
