@@ -8,7 +8,7 @@ Keep track of a users last viewed pages and make a nice list. Uses web storage (
 * jQuery UI Core library
 * Zurb Foundation CSS library
 
-## Usuage
+## Usage
 
 Make some HTML
 
@@ -45,7 +45,7 @@ $('.last-viewed-pages').lastViewedPages({
 - `destroy`: Clear the array of last viewed pages in local storage and remove the injected markup.
 - `clear`: Clear the array of last viewed pages in local storage.
 
-## Data params
+## Data parameters
 
 Some of the options can also be set via `data-` attributes on the element. They will override any options set with initializing the plugin.
 
